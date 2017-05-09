@@ -1,44 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "camel_sdk",
-        "scope": null,
-        "escapedName": "camel_sdk",
-        "name": "camel_sdk",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "/Users/ronald/Projects/AEM/stratpoint_react-portal/globe-unimart/src/main/ts"
-    ]
-  ],
-  "_from": "camel_sdk@latest",
-  "_id": "camel_sdk@1.0.0",
-  "_inCache": true,
-  "_location": "/camel_sdk",
-  "_nodeVersion": "4.4.7",
-  "_npmUser": {},
-  "_npmVersion": "4.0.5",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "camel_sdk",
-    "scope": null,
-    "escapedName": "camel_sdk",
-    "name": "camel_sdk",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "http://stratpoint-npm-1369609312.ap-southeast-1.elb.amazonaws.com/camel_sdk/-/camel_sdk-1.0.0.tgz",
-  "_shasum": "6b8437be695ef7657a3e4a440ab6fa948fd7ef37",
-  "_shrinkwrap": null,
-  "_spec": "camel_sdk",
-  "_where": "/Users/ronald/Projects/AEM/stratpoint_react-portal/globe-unimart/src/main/ts",
   "author": {
     "name": "Ronald DC"
   },
