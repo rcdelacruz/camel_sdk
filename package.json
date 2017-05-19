@@ -19,7 +19,6 @@
   "main": "src/index.js",
   "name": "camel_sdk",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "readmeFilename": "README.md",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"

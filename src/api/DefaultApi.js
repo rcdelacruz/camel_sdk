@@ -53,11 +53,14 @@
     /**
      * Deletes an item
      * @param {String} xUnimartApiUrl Function name
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.body 
      * @param {module:api/DefaultApi~apiDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiDelete = function (xUnimartApiUrl, callback) {
-      var postBody = null;
+    this.apiDelete = function(xUnimartApiUrl, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['body'];
 
       // verify the required parameter 'xUnimartApiUrl' is set
       if (xUnimartApiUrl === undefined || xUnimartApiUrl === null) {
@@ -136,13 +139,17 @@
      */
 
     /**
-     * Add a new item
+     * Add a new item* 
      * @param {String} xUnimartApiUrl Function name
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.body 
      * @param {module:api/DefaultApi~apiPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiPost = function (xUnimartApiUrl, callback) {
-      var postBody = null;
+    this.apiPost = function(xUnimartApiUrl, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['body'];
+
 
       // verify the required parameter 'xUnimartApiUrl' is set
       if (xUnimartApiUrl === undefined || xUnimartApiUrl === null) {
@@ -180,11 +187,14 @@
     /**
      * Update an existing pet
      * @param {String} xUnimartApiUrl Function name
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.body 
      * @param {module:api/DefaultApi~apiPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiPut = function (xUnimartApiUrl, callback) {
-      var postBody = null;
+    this.apiPut = function(xUnimartApiUrl, opts, callback) {
+      opts = opts || {};
+      var postBody = opts['body'];
 
       // verify the required parameter 'xUnimartApiUrl' is set
       if (xUnimartApiUrl === undefined || xUnimartApiUrl === null) {

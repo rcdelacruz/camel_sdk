@@ -14,7 +14,7 @@
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('superagent'), require('querystring'));
+    module.exports = factory(require('superagent'), require('querystring'), require('os'));
   } else {
     // Browser globals (root is window)
     if (!root.CamelSdk) {
@@ -22,7 +22,7 @@
     }
     root.CamelSdk.ApiClient = factory(root.superagent, root.querystring);
   }
-}(this, function (superagent, querystring) {
+}(this, function (superagent, querystring, os) {
   'use strict';
 
   /**
@@ -38,12 +38,26 @@
    * @class
    */
   var exports = function () {
+    this.hostname = os.hostname();
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
      * @default http://52.221.65.42/apps/intrl-unimart
      */
-    this.basePath = 'http://52.221.65.42/apps/intrl-unimart'.replace(/\/+$/, '');
+    switch (this.hostname) {
+      case 'localhost':
+      case '52.221.65.42':
+      case 'unimart-webtool-dev.stratpoint.com':
+      case 'unimart-client-dev.stratpoint.com':
+        this.basePath = 'http://52.221.65.42/apps/intrl-unimart'.replace(/\/+$/, '');
+        break;
+      case 'intlstage.globe.com.ph':
+        this.basePath = 'http://intlstage.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+        break;
+      default:
+        this.basePath = 'http://globeinternational.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+        break;
+    }
 
     /**
      * The authentication methods to be included for all API calls.
