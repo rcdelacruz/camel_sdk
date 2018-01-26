@@ -58,7 +58,7 @@
      * @param {module:api/DefaultApi~apiDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiDelete = function(xUnimartApiUrl, opts, callback) {
+    this.apiDelete = function (xUnimartApiUrl, opts, callback) {
       opts = opts || {};
       var postBody = opts['body'];
 
@@ -71,7 +71,8 @@
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'x-unimart-api-url': xUnimartApiUrl
+        'x-unimart-api-url': xUnimartApiUrl,
+        'x-unimart-api-token': opts['xUnimartApiToken']
       };
       var formParams = {};
 
@@ -102,7 +103,7 @@
      * @param {module:api/DefaultApi~apiGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiGet = function (xUnimartApiUrl, callback) {
+    this.apiGet = function (xUnimartApiUrl, opts, callback) {
       var postBody = null;
 
       // verify the required parameter 'xUnimartApiUrl' is set
@@ -114,7 +115,8 @@
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'x-unimart-api-url': xUnimartApiUrl
+        'x-unimart-api-url': xUnimartApiUrl,
+        'x-unimart-api-token': opts['xUnimartApiToken']
       };
       var formParams = {};
 
@@ -146,7 +148,7 @@
      * @param {module:api/DefaultApi~apiPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiPost = function(xUnimartApiUrl, opts, callback) {
+    this.apiPost = function (xUnimartApiUrl, opts, callback) {
       opts = opts || {};
       var postBody = opts['body'];
 
@@ -160,7 +162,8 @@
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'x-unimart-api-url': xUnimartApiUrl
+        'x-unimart-api-url': xUnimartApiUrl,
+        'x-unimart-api-token': opts['xUnimartApiToken']
       };
       var formParams = {};
 
@@ -192,7 +195,7 @@
      * @param {module:api/DefaultApi~apiPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SuccessResponse}
      */
-    this.apiPut = function(xUnimartApiUrl, opts, callback) {
+    this.apiPut = function (xUnimartApiUrl, opts, callback) {
       opts = opts || {};
       var postBody = opts['body'];
 
@@ -205,7 +208,8 @@
       var pathParams = {};
       var queryParams = {};
       var headerParams = {
-        'x-unimart-api-url': xUnimartApiUrl
+        'x-unimart-api-url': xUnimartApiUrl,
+        'x-unimart-api-token': opts['xUnimartApiToken']
       };
       var formParams = {};
 

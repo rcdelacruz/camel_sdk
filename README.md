@@ -57,6 +57,7 @@ var api = new SwaggerCamelPassthru.DefaultApi()
 var xUnimartApiUrl = "xUnimartApiUrl_example"; // {String} Function name
 
 var opts = { 
+  'xUnimartApiToken': "xUnimartApiToken_example", // {String} Function name
   'body': "body_example" // {String} 
 };
 

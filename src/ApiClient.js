@@ -44,21 +44,31 @@
      * @type {String}
      * @default http://52.221.65.42/apps/intrl-unimart
      */
-    switch (this.hostname) {
-      case 'localhost':
-      case '52.221.65.42':
-      case 'unimart-webtool-dev.stratpoint.com':
-      case 'unimart-client-dev.stratpoint.com':
-        this.basePath = 'http://52.221.65.42/apps/intrl-unimart'.replace(/\/+$/, '');
-        break;
-      case 'intlstage.globe.com.ph':
-        this.basePath = 'http://intlstage.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
-        break;
-      default:
-        this.basePath = 'http://globeinternational.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
-        break;
-    }
-
+    // switch (this.hostname) {
+    //   case 'localhost':
+    //   case 'unimart-webtool-dev.stratpoint.com':
+    //     this.basePath = '//unimart-webtool-dev.stratpoint.com/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    //   case 'unimart-client-dev.stratpoint.com':
+    //     this.basePath = '//unimart-client-dev.stratpoint.com/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    //   case 'intlstage.globe.com.ph':
+    //     this.basePath = '//intlstage.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    //   case 'unimartstage-webtool.globe.com.ph':
+    //     this.basePath = '//unimartstage-webtool.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    //   case 'globeinternational-webtool.globe.com.ph':
+    //     this.basePath = '//globeinternational-webtool.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    //   case 'globeinternational.globe.com.ph':
+    //     this.basePath = '//globeinternational.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    //   default:
+    //     this.basePath = '//globeinternational.globe.com.ph/apps/intrl-unimart'.replace(/\/+$/, '');
+    //     break;
+    // }
+    this.basePath = '/apps/intrl-unimart'.replace(/\/+$/, '');
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}

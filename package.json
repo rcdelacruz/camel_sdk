@@ -23,5 +23,5 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },
-  "version": "1.0.0"
+  "version": "1.0.6"
 }
